@@ -7,9 +7,12 @@ const arrOperations = ["*", "/", "+", ".", "-"];
 
 export default function App() {
   const [input, setInput] = useState("");
+  const [language, setLanguage] = useState("en");
+
   function insertNum(val) {
     setInput(input + val);
   }
+
   function insertOperation(val) {
     if (
       input === "" ||
@@ -30,9 +33,29 @@ export default function App() {
     }
   }
 
+  function toggleLanguage() {
+    setLanguage((prevLanguage) => (prevLanguage === "en" ? "pt" : "en"));
+  }
+
   return (
     <div className="App">
-      <h1>Calculator with React</h1>
+      <div className="header">
+        <h1
+          style={{
+            fontFamily: "Poppins",
+            fontSize: "2rem",
+            display: "inline-block",
+          }}
+        >
+          {language === "en"
+            ? "Calculator with React"
+            : "Calculadora com React"}
+        </h1>
+        <button onClick={toggleLanguage} className="language-button">
+          {language === "en" ? "🇬🇧" : "🇧🇷"}
+        </button>
+      </div>
+
       <div className="calc-wrapper">
         <Button isInput>{input}</Button>
         <div className="line">
