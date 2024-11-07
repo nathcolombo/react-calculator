@@ -25,7 +25,12 @@ h1 {
   font-family: "Poppins", sans-serif;
   color: #282c34;
   margin: 20px 0;
-  white-space: nowrap; /* Mantém o texto em uma única linha */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block; /* Garante que o text-overflow funcione */
+  width: 100%; /* Define largura máxima */
+  max-width: 100%; /* Garante que o h1 se ajuste ao contêiner */
 }
 
 .header {
