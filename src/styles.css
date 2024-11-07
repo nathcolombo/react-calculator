@@ -28,9 +28,12 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: block; /* Garante que o text-overflow funcione */
-  width: 100%; /* Define largura máxima */
-  max-width: 100%; /* Garante que o h1 se ajuste ao contêiner */
+  display: block;
+  width: 90%;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
 }
 
 .header {
@@ -39,6 +42,7 @@ h1 {
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: nowrap;
+  padding: 0 10px;
 }
 
 .language-button {
