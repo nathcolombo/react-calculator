@@ -25,6 +25,7 @@ h1 {
   font-family: "Poppins", sans-serif;
   color: #282c34;
   margin: 20px 0;
+  white-space: nowrap; /* Mantém o texto em uma única linha */
 }
 
 .header {
