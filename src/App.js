@@ -40,13 +40,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1
-          style={{
-            fontFamily: "Poppins",
-            fontSize: "2rem",
-            display: "inline-block",
-          }}
-        >
+        <h1 className="header-title">
           {language === "en"
             ? "Calculator with React"
             : "Calculadora com React"}
